@@ -13,19 +13,35 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
-        <h1><a href="#">logo</a></h1>
-        <nav>
-            <ul>
+    <header id="header" class="flexBox">
+        <h1><a href="#"><img src="images/logo.png" alt=""></a></h1>
+        <nav class="innerBox nav">
+            <ul class="flexBox">
                 <li><a href="#">한경기업정보</a></li>
-                <li><a href="#">취업트렌드</a></li>
-                <li><a href="#">취업가이드</a></li>
+                <li>
+                    <a href="#">취업트렌드</a>
+                    <ol>
+                        <li><a href="#">인사담당자 Q&A</a></li>
+                        <li><a href="#">인사담당자 분석</a></li>
+                        <li><a href="#">인재상</a></li>
+                        <li><a href="#">인재상 분석</a></li>
+                        <li><a href="#">관련뉴스</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#">취업가이드</a>
+                    <ol>
+                        <li><a href="#">채용영상관</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">채용후기</a></li>
+                    </ol>
+                </li>
                 <li><a href="#">취업매거진</a></li>
                 <li><a href="#">공지사항 및 이벤트</a></li>
             </ul>
         </nav>
         <div class="header-login">
-            <ul>
+            <ul class="flexBox">
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
             </ul>
@@ -33,14 +49,14 @@
         <div class="header-mo"></div>
     </header>
     <main>
-        <section id="banner">배너 롤링</section>
-        <section id="main__today">오늘의 한경기업정보</section>
-        <section id="main__brief">기업채용설명회</section>
-        <section id="main__company">한경기업정보</section>
-        <section id="main__schedule">기업채용일정</section>
-        <section id="main__trend">키워드로 보는 채용 트렌드</section>
-        <section id="main__magazine">취업매거진</section>
-        <section id="main__board">게시판</section>
+        <section id="banner" style="background:rgba(0,0,0,0.5);">배너 롤링</section>
+        <section id="main__today" style="background:rgba(0,0,0,0.2);">오늘의 한경기업정보</section>
+        <section id="main__brief" style="background:rgba(0,0,0,0.8);">기업채용설명회</section>
+        <section id="main__company" style="background:rgba(0,0,0,0.9);">한경기업정보</section>
+        <section id="main__schedule" style="background:rgba(0,0,0,0.1);">기업채용일정</section>
+        <section id="main__trend" style="background:rgba(0,0,0,0.5);">키워드로 보는 채용 트렌드</section>
+        <section id="main__magazine" style="background:rgba(0,0,0,0.4);">취업매거진</section>
+        <section id="main__board" style="background:rgba(0,0,0,0.8);">게시판</section>
     </main>
     <footer id="footer">
         <div></div>
