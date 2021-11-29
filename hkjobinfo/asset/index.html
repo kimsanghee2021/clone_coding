@@ -12,12 +12,19 @@
     <!-- <link rel="stylesheet" href="css/common.css"> -->
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    <header id="header" class="flexBox on">
+<body></body>
+    <header id="header" class="flexBox">
         <h1><a href="#"><img src="images/logo.png" alt=""></a></h1>
-        <nav class="innerBox nav">
-            <ul class="flexBox">
-                <li><a href="#">한경기업정보</a></li>
+        <nav class="container nav on">
+            <ul class="flexBox ">
+                <li><a href="#">한경기업정보</a>
+                    <!-- <ol class="subMenu">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">질의응답</a></li>
+                        <li><a href="#">설문조사</a></li>
+                        <li><a href="#">이벤트</a></li>
+                    </ol> -->
+                </li>
                 <li>
                     <a href="#">취업트렌드</a>
                     <ol class="subMenu">
@@ -37,7 +44,14 @@
                     </ol>
                 </li>
                 <li>
-                    <a href="#">취업매거진</a></li>
+                    <a href="#">취업매거진</a>
+                    <!-- <ol class="subMenu">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">질의응답</a></li>
+                        <li><a href="#">설문조사</a></li>
+                        <li><a href="#">이벤트</a></li>
+                    </ol> -->
+                </li>
                 <li><a href="#">공지사항 및 이벤트</a>
                     <ol class="subMenu">
                         <li><a href="#">공지사항</a></li>
@@ -56,6 +70,7 @@
         </div>
         <div class="header-mo"></div>
     </header>
+    <div class="navLine"></div>
     <main>
         <section id="banner" style="background:rgba(0,0,0,0.5);">배너 롤링</section>
         <section id="main__today" style="background:rgba(0,0,0,0.2);">오늘의 한경기업정보</section>
@@ -70,18 +85,22 @@
         <div></div>
     </footer>
     <script>
-        var $topMenu = $('#header > .nav > ul > li > a');
-        var $subMenu = $('.subMenu > li > a');
+        var $topMenu = $('#header > .nav > ul');
+        var $nav = $('#header > .nav');
+        var $subMenu = $('.subMenu');
         var $header = $('#header');
         console.log($header);
-
+        
         $topMenu.mouseenter(function(){
-            $subMenu.stop().animate({opacity : 1},200);
-            $header.addClass('on');
+            $subMenu.stop().slideDown();
+            $header.addClass('on').children('ul').animate({'height':'250px'},650);
+            $('.navLine').stop().animate({height:'250px'},550);
         }).mouseleave(function(){
-            $subMenu.stop().animate({opacity : 0},200);
+            $subMenu.stop().slideUp();
             $header.removeClass('on');
+            $('.navLine').stop().animate({height:'0px'},550);
         });
+        
     </script>
 </body>
 </html>
