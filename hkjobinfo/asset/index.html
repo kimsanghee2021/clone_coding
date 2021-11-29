@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header id="header" class="flexBox">
+    <header id="header" class="flexBox on">
         <h1><a href="#"><img src="images/logo.png" alt=""></a></h1>
         <nav class="innerBox nav">
             <ul class="flexBox">
@@ -69,5 +69,19 @@
     <footer id="footer">
         <div></div>
     </footer>
+    <script>
+        var $topMenu = $('#header > .nav > ul > li > a');
+        var $subMenu = $('.subMenu > li > a');
+        var $header = $('#header');
+        console.log($header);
+
+        $topMenu.mouseenter(function(){
+            $subMenu.stop().animate({opacity : 1},200);
+            $header.addClass('on');
+        }).mouseleave(function(){
+            $subMenu.stop().animate({opacity : 0},200);
+            $header.removeClass('on');
+        });
+    </script>
 </body>
 </html>
