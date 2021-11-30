@@ -86,10 +86,9 @@
     </footer>
     <script>
         var $topMenu = $('#header > .nav > ul');
-        var $nav = $('#header > .nav');
+        var $topMenu2 = $('#header > .nav > ul > li > a');
         var $subMenu = $('.subMenu');
         var $header = $('#header');
-        console.log($header);
         
         $topMenu.mouseenter(function(){
             $subMenu.stop().slideDown();
@@ -100,7 +99,9 @@
             $header.removeClass('on');
             $('.navLine').stop().animate({height:'0px'},550);
         });
-        
+        $('.subMenu > li').mouseenter(function(){
+            $(this).parent('a').css({'background':'red'});
+        });
     </script>
 </body>
 </html>
