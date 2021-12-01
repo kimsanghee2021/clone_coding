@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>한경기업정보</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/main.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/default.css">
-    <!-- <link rel="stylesheet" href="css/common.css"> -->
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body></body>
     <header id="header" class="flexBox">
@@ -72,14 +73,28 @@
     </header>
     <div class="navLine"></div>
     <main>
-        <section id="banner" style="background:rgba(0,0,0,0.5);">배너 롤링</section>
-        <section id="main__today" style="background:rgba(0,0,0,0.2);">오늘의 한경기업정보</section>
-        <section id="main__brief" style="background:rgba(0,0,0,0.8);">기업채용설명회</section>
-        <section id="main__company" style="background:rgba(0,0,0,0.9);">한경기업정보</section>
-        <section id="main__schedule" style="background:rgba(0,0,0,0.1);">기업채용일정</section>
-        <section id="main__trend" style="background:rgba(0,0,0,0.5);">키워드로 보는 채용 트렌드</section>
-        <section id="main__magazine" style="background:rgba(0,0,0,0.4);">취업매거진</section>
-        <section id="main__board" style="background:rgba(0,0,0,0.8);">게시판</section>
+        <section id="banner">
+            <div class="swiper mainBanner">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/main/mainBanner01.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/main/mainBanner02.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/main/mainBanner03.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/main/mainBanner04.png" alt=""></div>
+                </div>
+                <div class="container">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section id="main__today" style="background:rgba(0,0,0,0.2); height: 600px;">오늘의 한경기업정보</section>
+        <section id="main__brief" style="background:rgba(0,0,0,0.8);  height: 600px;">기업채용설명회</section>
+        <section id="main__company" style="background:rgba(0,0,0,0.9);  height: 600px;">한경기업정보</section>
+        <section id="main__schedule" style="background:rgba(0,0,0,0.1);  height: 600px;">기업채용일정</section>
+        <section id="main__trend" style="background:rgba(0,0,0,0.5);  height: 600px;">키워드로 보는 채용 트렌드</section>
+        <section id="main__magazine" style="background:rgba(0,0,0,0.4);  height: 600px;">취업매거진</section>
+        <section id="main__board" style="background:rgba(0,0,0,0.8);  height: 600px;">게시판</section>
     </main>
     <footer id="footer">
         <div></div>
@@ -92,8 +107,8 @@
         
         $topMenu.mouseenter(function(){
             $subMenu.stop().slideDown();
-            $header.addClass('on').children('ul').animate({'height':'250px'},650);
-            $('.navLine').stop().animate({height:'250px'},550);
+            $header.addClass('on');
+            $('.navLine').stop().animate({height:'300px'},550);
         }).mouseleave(function(){
             $subMenu.stop().slideUp();
             $header.removeClass('on');
@@ -102,6 +117,20 @@
         $('.subMenu > li').mouseenter(function(){
             $(this).parent('a').css({'background':'red'});
         });
+
+        var mainBanner = new Swiper(".mainBanner", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
     </script>
 </body>
 </html>
