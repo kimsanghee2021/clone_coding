@@ -40,5 +40,8 @@ section { width: 100%; }
 
 /* banner */
 #banner{width: 100%; max-width:1940px; margin:0 auto; position: relative;}
-.mainBanner{}
-.swiper-button-next{background: url(../images/main/main_controls_next.png) no-repeat cente center; width:56px; height: 56px;}
+#banner .mainBanner{}
+#banner .container{}
+#banner .swiper-button-next{background: url(../images/main/main_controls_next.png) no-repeat center center; width:56px; height: 56px;}
+#banner .swiper-button-prev{background: url(../images/main/main_controls_prev.png) no-repeat center center; width:56px; height: 56px;}
+#banner .swiper-button-next::after, #banner .swiper-button-prev::after{content: "";}
