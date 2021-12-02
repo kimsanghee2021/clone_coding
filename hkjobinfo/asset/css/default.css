@@ -43,7 +43,7 @@
   .select-box select {cursor:pointer;}
   
   /* 드래그시 색상변경 */
-  ::selection {color:#fff; background:#d78419; border:0;}
+  ::selection {color:#fff; background:#000; border:0;}
   
   /* 하이라이트 */
   .highlight {color:red !important;}
