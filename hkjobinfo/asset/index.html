@@ -107,10 +107,12 @@
                             </li>
                             <li>
                                 <div class="today_contant_logo">
-                                    <div class="today_contant_logoBox">S-OIL</div>
-                                    <div class="today_contant_tit"></div>
+                                    <div class="today_contant_logoBox"></div>
+                                    <div class="today_contant_tit">S-OIL</div>
                                 </div>
-                                <div class="today_contant_artice"></div>
+                                <div class="today_contant_artice">
+                                    1976년 설립된 S-OIL은 수익성 위주의 경영전략과 국제화 시대에 맞는 기동성 있고 진취적인 경영 체질을 배양함으로써 경쟁력 있는 정유회사로 성장했습니다. S-OIL은 최고의 경쟁력과 창의성을 갖춘 친환경 에너지 화학 기업으로 나가기 위해 석유화학 분야에 대규모 투자를 추진하고 있습니다.
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -147,21 +149,25 @@
         });
 
         var mainBanner = new Swiper(".mainBanner", {
-        slidesPerView: 1,
-        autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-            delay : 3000,   // 시간 설정
-            disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
-        },
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
+            slidesPerView: 1,
+            autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+                delay : 3000,   // 시간 설정
+                disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+            },
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    
+        $('.today_contant_box > ul > li').mouseenter(function(){
+            $(this).children('.btn_more').css('trasform','translate(-50%,-50%)','rotate(180deg)');
+        });
     </script>
 </body>
 </html>
