@@ -88,7 +88,32 @@
                 </div>
             </div>
         </section>
-        <section id="main__today" style="background:rgba(0,0,0,0.2); height: 600px;">오늘의 한경기업정보</section>
+        <section id="main__today">
+            <div class="today_bg"></div>
+                <div class="today_contant">
+                    <h1>오늘의 <strong>한경기업정보</strong></h1>
+                    <div class="today_contant_box">
+                        <ul>
+                            <li><img src="images/main/main_today_img.png" alt=""></li>
+                            <li>
+                                <div class="today_contant_logo">
+                                    <div class="today_contant_logoBox"><img src="images/main/main_today_logo01.png" alt=""></div>
+                                    <div class="today_contant_tit">프르덴셜 생명</div>
+                                </div>
+                                <div class="today_contant_artice"></div>
+                            </li>
+                            <li>
+                                <div class="today_contant_logo">
+                                    <div class="today_contant_logoBox"></div>
+                                    <div class="today_contant_tit"></div>
+                                </div>
+                                <div class="today_contant_artice"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+        </section>
         <section id="main__brief" style="background:rgba(0,0,0,0.8);  height: 600px;">기업채용설명회</section>
         <section id="main__company" style="background:rgba(0,0,0,0.9);  height: 600px;">한경기업정보</section>
         <section id="main__schedule" style="background:rgba(0,0,0,0.1);  height: 600px;">기업채용일정</section>
@@ -120,7 +145,10 @@
 
         var mainBanner = new Swiper(".mainBanner", {
         slidesPerView: 1,
-        spaceBetween: 30,
+        autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+            delay : 3000,   // 시간 설정
+            disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+        },
         loop: true,
         pagination: {
             el: ".swiper-pagination",
