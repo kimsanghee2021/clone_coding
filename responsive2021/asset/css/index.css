@@ -1,0 +1,15 @@
+html{font-size: 20px;}
+body{background: #4621AD; opacity: 83%; font-size: 1rem;}
+header{width:64.45rem; margin:0 auto; }
+header h1{width: 12.35rem; height: 5.2rem; border-radius:0 0 2.25rem 2.25rem; margin:0 auto; background:#fff url('../images/Logo.png') no-repeat center center / 4.75rem auto;}
+header .btn_menu,
+header .search, 
+header .btn_alram{display: none;}
+header nav {margin-top: 7.4rem;}
+header nav > ul{display: flex;}
+header nav > ul > li > a{font-size: .75rem; line-height:1rem; margin-right:3rem; font-weight: 300; color:#C6C6D4; position: relative;transition: all 0.3s; }
+header nav > ul > li > a:hover{color:#fff; font-weight: 600;}
+header nav > ul > li > a:after{position: absolute; bottom:-0.125rem; left:0%; right:0%; height: 0.15rem; background: #fff; content:''; transition: all 0.3s; transform: translateY(1rem); opacity: 0;}
+header nav > ul > li > a:hover:after{ transform: translateY(0rem); opacity: 1;}
+header nav > ul > li.active > a{color:#fff; font-weight: 600; position: relative;}
+header nav > ul > li.active > a::after{osition: absolute; bottom:-0.125rem; left:0%; right:0%; height: 0.15rem; background: #fff; content:''; transition: all 0.3s; transform: translateY(0rem); opacity: 1;}
