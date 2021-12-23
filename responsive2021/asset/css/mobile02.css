@@ -1,0 +1,13 @@
+header{width:100%; left:0%; transform: translateX(0%); padding:0; background: #fff; height:3.5rem;}
+header h1{
+    width: 1.75rem; height: 1.75rem; border-radius:0; position: absolute; 
+    top:50%;left:50%; transform: translate(-50%,-50%);
+    background:#fff url('../images/Logo_m.png') no-repeat center center / 1.75rem auto;
+    }
+header .btn_menu,header .btn_alram, header .search{display: block;}
+header .btn_menu,
+header .btn_alram{position: absolute; top:0; height: 3.5rem; width: 3.5rem; }
+header .btn_menu{left:0; background: url('../images/btn_menu.png') no-repeat center / 0.8315rem auto;}
+header .btn_alram{right:0; background: url('../images/ico_alram.png') no-repeat center /0.8rem auto;}
+header .btn_alram.on:after{position: absolute; top:0; right:0; width:0.4rem; height: 0.4rem; content: ""; background: #F28CAF;}
+header nav {margin-top: 0; display: none;}
