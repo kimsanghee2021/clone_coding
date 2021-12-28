@@ -1,11 +1,13 @@
+
 html{font-size: 20px;}
 body{background:url('../images/bg_visual.png') no-repeat 0 0 /cover; font-size: 1rem;}
 body:after{position: fixed; content:''; left:0; right:0; top:0; bottom:0; background: #4621AD; opacity: 0.83; z-index: -1;}
 
 /*** header ***/
-header{width:64.45rem; position: absolute; left:50%; top:0; transform: translateX(-50%); padding:7.4rem;}
+header{width:64.45rem; position: absolute; left:50%; top:0; transform: translateX(-50%);}
 header h1{width: 12.35rem; height: 5.2rem; border-radius:0 0 2.25rem 2.25rem; position: absolute; top:0; left:50%; transform: translateX(-50%); background:#fff url('../images/Logo.png') no-repeat center center / 4.75rem auto;}
 header .btn_menu,header .search, header .btn_alram{display: none;}
+
 /* header menu */
 header nav {margin-top: 7.4rem;}
 header nav > ul{display: flex;}
@@ -16,6 +18,17 @@ header nav > ul > li > a:hover:after{content:""; position: absolute; left:0; rig
 header nav > ul > li > a:after{position: absolute; bottom:-0.125rem; left:0%; right:0%; height: 0.15rem; background: #fff; content:''; transition: all 0.3s; transform: translateY(1rem); opacity: 0;}
 
 /* main */
-.visual{width:100%; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;}
-.visual h2{font-size: 2rem; font-weight: 600; color:#fff;}
-.visual .visual_desc{font-size: 0.7rem; color:#fff;}
+.visual{width:100%; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; color:#fff;}
+.visual h2{font-size: 2rem; margin-bottom: 0.05rem; font-weight: 600;}
+.visual .visual_desc{font-size: 0.7rem; line-height:0.9rem; padding:0.5rem 0 4.65rem;}
+.visual .list{display: flex; width: 58.2rem; margin:0 auto;}
+.visual .list li{flex:1; background: no-repeat center top / auto 3.6425rem; padding-top:4.603rem;}
+.visual .list li:nth-child(1){background-image:url('../images/ico_index4.png');}
+.visual .list li:nth-child(2){background-image:url('../images/ico_index1.png');}
+.visual .list li:nth-child(3){background-image:url('../images/ico_index2.png');}
+.visual .list li:nth-child(4){background-image:url('../images/ico_index3.png');}
+.visual .list li strong{font-size: 0.75rem; padding-bottom: 0.548rem; display: inline-block;}
+.visual .list li p{font-size: 0.7rem; font-weight: 100;}
+.visual .btn_wrapper button{width: 12.6165rem; margin:0 1.573rem; height: 2.174rem;  font-weight:bold; background: none; text-align: center; border-radius:1.1rem; margin-top: 4.6685rem; font-size: 0.85rem;}
+.visual .btn_wrapper button:first-child{background: none; color:#fff; border:0.05rem solid #fff;}
+.visual .btn_wrapper button:last-child{background:#fff; color:#4621AD; box-shadow: 0 6px 12px #0000000D;}
