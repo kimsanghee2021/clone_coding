@@ -20,7 +20,7 @@ header nav > ul > li > a:after{position: absolute; bottom:-0.125rem; left:0%; ri
 /* main */
 .visual{width:100%; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; color:#fff;}
 .visual h2{font-size: 2rem; margin-bottom: 0.05rem; font-weight: 600;}
-.visual .visual_desc{font-size: 0.7rem; line-height:0.9rem; padding:0.5rem 0 4.65rem;}
+.visual .visual_desc{font-size: 0.7rem; line-height:0.9rem; padding:0.5rem 0 4.65rem; font-weight: 300;}
 .visual .list{display: flex; width: 58.2rem; margin:0 auto;}
 .visual .list li{flex:1; background: no-repeat center top / auto 3.6425rem; padding-top:4.603rem;}
 .visual .list li:nth-child(1){background-image:url('../images/ico_index4.png');}
@@ -28,7 +28,7 @@ header nav > ul > li > a:after{position: absolute; bottom:-0.125rem; left:0%; ri
 .visual .list li:nth-child(3){background-image:url('../images/ico_index2.png');}
 .visual .list li:nth-child(4){background-image:url('../images/ico_index3.png');}
 .visual .list li strong{font-size: 0.75rem; padding-bottom: 0.548rem; display: inline-block;}
-.visual .list li p{font-size: 0.7rem; font-weight: 100;}
+.visual .list li p{font-size: 0.7rem; font-weight: 200;}
 .visual .btn_wrapper button{width: 12.6165rem; margin:0 1.573rem; height: 2.174rem;  font-weight:bold; background: none; text-align: center; border-radius:1.1rem; margin-top: 4.6685rem; font-size: 0.85rem;}
 .visual .btn_wrapper button:first-child{background: none; color:#fff; border:0.05rem solid #fff;}
 .visual .btn_wrapper button:last-child{background:#fff; color:#4621AD; box-shadow: 0 6px 12px #0000000D;}

@@ -28,3 +28,8 @@ header nav > ul >li ~ li{padding:1.6rem 0 0 0;}
 header nav > ul > li > a:after{display: none;}
 header nav > ul > li > a:hover{color:#4621AD; font-weight: bold;}
 
+/** MAIN **/
+.visual{width:100%; height: auto; display:block; text-align: center;}
+.visual h2{margin-top:8.85rem;}
+.visual .visual_desc{padding:3rem 0 4.2rem;}
+.visual .list{display: block; width: 58.2rem; margin:0 auto;}
