@@ -1,26 +1,30 @@
+
+/*** HEAD ***/
 header{width:100%; left:0%; padding:0; transform: translateX(0); background: #fff; height: 3.5rem;}
 header h1{width: 1.75rem; top:50%; transform: translate(-50%,-50%); height: 1.75rem; border-radius:0; background:url('../images/Logo_m.png') no-repeat center center / 100% auto;}
 header .search, header .btn_menu, header .btn_alram{display: block;}
+
+/*** HEAD menu & alram ***/
 header .btn_menu, header .btn_alram{position: absolute; top:0; height:3.5rem; width:3.5rem;}
 header .btn_menu{ left:0; background:url('../images/btn_menu.png')no-repeat center center /0.8315rem auto; }
-header .btn_menu.active{background-image: url('../images/chevron-down.png');}
-
 header .btn_alram{right:0; background: url('../images/ico_alram.png') no-repeat center center / 0.8rem auto; }
 header .btn_alram.on:after{position: absolute; right:1.2rem; top:1.1rem; content: ""; width: 0.4rem; height: 0.4rem; background: #F28CAF; border:0.1rem solid #fff; border-radius: 100%;}
+header .btn_menu.active{background-image: url('../images/chevron-down.png');}
 
-header .navigation{display: none; height: 14.3rem; padding:2.35rem 0 0; box-sizing: border-box;}
-header .navigation.active{display: block; width: 100%; text-align: center; background: #fff; position: absolute; left:0; top:3.5rem;}
-header .navigation input{
-    width: 10.4335rem; height: 1.7785rem; border-radius: 0.9rem; border:none;
-    background: #F6F6F6 url('../images/icon_search.png') no-repeat 3.35rem center /0.919rem auto;
+/*** HEAD navigation ***/
+header .navigation{display: none; height: 14.3rem; padding:2.35rem 0 0; box-sizing: border-box; width: 100%; text-align: center; background: #fff; position: absolute; left:0; top:3.5rem;}
+header .navigation.active{width: 100%; text-align: center; background: #fff; position: absolute; left:0; top:3.5rem;box-shadow:0,0.1rem,0.3rem rgba(0,0,0,0.1);}
 
+/*** HEAD search ***/
+header .search input{width: 10.4335rem; height: 1.7785rem; border-radius: 0.9rem; border:none; background:#f6f6f6;}
+header .search input::placeholder{text-align: center; text-indent:0.5rem; font-size: 0.6rem; color:#C1C1C1; padding-left:0.75rem;}
+header .search input:placeholder-shown {background: #F6F6F6 url('../images/icon_search.png') no-repeat 3.35rem center /0.919rem auto; padding-left:0.75rem;}
 
-}
-header .navigation input::placeholder{text-align: center; text-indent:1.4935rem; font-size: 0.6rem; color:#C1C1C1;}
+/*** HEAD 메뉴 ***/
 header nav {margin-top:0;}
 header nav > ul{display: block; padding:1.5rem 0 0;}
 header nav > ul >li{padding:0;}
 header nav > ul >li ~ li{padding:1.6rem 0 0 0;}
-
-header nav > ul > li > a:hover{color:#4621AD; font-weight: bold;}
 header nav > ul > li > a:after{display: none;}
+header nav > ul > li > a:hover{color:#4621AD; font-weight: bold;}
+

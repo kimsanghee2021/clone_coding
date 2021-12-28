@@ -1,13 +1,24 @@
 header{width:100%; left:0%; transform: translateX(0%); padding:0; background: #fff; height:3.5rem;}
-header h1{
-    width: 1.75rem; height: 1.75rem; border-radius:0; position: absolute; 
-    top:50%;left:50%; transform: translate(-50%,-50%);
-    background:#fff url('../images/Logo_m.png') no-repeat center center / 1.75rem auto;
-    }
+header h1{width: 1.75rem; height: 1.75rem; border-radius:0; position: absolute; top:50%;left:50%; transform: translate(-50%,-50%);background:#fff url('../images/Logo_m.png') no-repeat center center / 1.75rem auto;}
 header .btn_menu,header .btn_alram, header .search{display: block;}
-header .btn_menu,
-header .btn_alram{position: absolute; top:0; height: 3.5rem; width: 3.5rem; }
+header .btn_menu,header .btn_alram{position: absolute; top:0; height: 3.5rem; width: 3.5rem; }
 header .btn_menu{left:0; background: url('../images/btn_menu.png') no-repeat center / 0.8315rem auto;}
 header .btn_alram{right:0; background: url('../images/ico_alram.png') no-repeat center /0.8rem auto;}
-header .btn_alram.on:after{position: absolute; top:0; right:0; width:0.4rem; height: 0.4rem; content: ""; background: #F28CAF;}
-header nav {margin-top: 0; display: none;}
+header .btn_alram.on:after{position: absolute; top:1.1rem; right:1.3rem; width:0.4rem; height: 0.4rem; content: ""; background: #F28CAF; border-radius:100%; border:0.05rem solid #fff;}
+
+header .navigation{width:100%; height:14.3rem; background: #fff; text-align: center; background: #fff;  position: absolute; top:3.5rem; left:50%; transform: translateX(-50%); display: none;}
+header .navigation.active{display: block;}
+
+header nav {margin-top:0;}
+header nav > ul{display: block; padding-top:1.5rem;}
+header nav > ul > li{padding:0; }
+header nav > ul > li ~ li{padding:1.6rem 0 0;}
+
+header nav > ul > li > a:hover{color:#4621AD;}
+header nav > ul > li > a:hover:after{display: none;}
+header nav > ul > li > a:after{display: none;}
+
+header .search input[type="search"]{border:none; border-radius:0.9rem; background:#F6F6F6 url('../images/icon_search.png') no-repeat 3.35rem /0.919rem auto; width: 10.4335rem; height: 1.7785rem;}
+header .search input[type="search"]::placeholder{color:#C1C1C1; font-size: 0.6rem; text-indent:4.843rem;}
+
+
