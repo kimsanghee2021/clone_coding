@@ -1,0 +1,168 @@
+@import url('normalize.css');
+/**------------------------  font css -------------------------------**/
+
+@font-face {
+    font-family: 'SF UI Display Light';
+    font-style: normal;
+    font-weight: 100;
+    src: local('SF UI Display Light'), url('../fonts/sf-ui-display-light-58646b33e0551.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'SF UI Display Medium';
+    font-style: normal;
+    font-weight: 300;
+    src: local('SF UI Display Medium'), url('../fonts/sf-ui-display-medium-58646be638f96.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'SF UI Display Semibold';
+    font-style: normal;
+    font-weight: 400;
+    src: local('SF UI Display Semibold'), url('../fonts/sf-ui-display-semibold-58646eddcae92.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'SF UI Display Bold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('SF UI Display Bold'), url('../fonts/sf-ui-display-bold-58646a511e3d9.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'SF UI Display Heavy';
+    font-style: normal;
+    font-weight: 900;
+    src: local('SF UI Display Heavy'), url('../fonts/sf-ui-display-heavy-586470160b9e5.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SF UI Text Regular';
+    font-style: normal;
+    font-weight: 300;
+    src: local('SF UI Text Regular'), url('../fonts/SFUIText-Regular.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'SF UI Text Medium';
+    font-style: normal;
+    font-weight: 400;
+    src: local('SF UI Text Medium'), url('../fonts/SFUIText-Medium.woff') format('woff');
+}
+
+    
+
+
+/**------------------------  reset css -------------------------------**/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img,video{
+	vertical-align:top;
+}
+a{color:#222; text-decoration: none;}
+hr{border:none; border-top:1px solid #ebebeb;}
+button, input{background: none; border:none;}
+
+
+
+
+/* ----------------- typography --------------- */
+body{font-family: 'SF UI Display Light'; font-weight: 300; font-size:15px; color:#4A4A4A; } 
+
+
+/* ----------------- layout --------------- */
+/* flex-center */
+.flex-center {display:flex; flex-wrap: align-items:center;}
+/* flex-between */
+.flex-between{display: flex; flex-wrap: wrap;  justify-content:space-between; align-items:center;}
+.hidden{font-size:0; text-indent:-999em; position: fixed; top:0; left:0; overflow:hidden;}
+
+#wrap{position: relative; margin:0 auto;}
+#wrap > header{height:94px; padding:0 22px; box-sizing:border-box;}
+
+/* ----------------- button & link --------------- */
+.splite{background: url('../images/sprite.png') no-repeat 0 0 / 492px 498px; display: inline-block; text-indent:-999em;}
+
+/* ----------------- form --------------- */
+
+/** header **/
+.toggle_btn{background-position:0 -48px; width:18px; height:18px;}
+.header_top_links{gap:34px;}
+.header_top_links .wish{background-position: -354px -432px; width:18px; height:18px;}
+.header_top_links .cart{background-position: -118px -96px; width:18px; height:18px;}
+
+/** nav **/
+.category_list{height: 66px; flex-wrap: nowrap; width:100%; overflow:hidden;}
+.category_list li{padding-left:22px; font-size:24px; font-family: 'SF UI Display Heavy';  color:#C2C4CA; text-transform:uppercase; }
+.category_list li.active{color:#000;}
+
+/** main **/
+main{padding-bottom:30px;}
+.latest_prod_list{width:100%;}
+.latest_prod_list li{width:48%;}
+.latest_prod_list li figure img{width:100%}
+.latest_prod_list li figure figcaption{text-align: center; padding:19px 0; box-sizing:border-box; line-height:1.5;}
+.latest_prod_list li figure figcaption h3{font-size:13px;  font-family: 'SF UI Display Medium'; }
+.latest_prod_list li figure figcaption p{font-size: 12px;}
+
+/** aside **/
+aside{display: block; width:65%; overflow:hidden; box-shadow: inset -21px 6px 32px -40px #D8D8D8; }
+.user_info{width:100%; padding:44px 22px; box-sizing:border-box; justify-content: center; gap: 0 14px;}
+.user_info .profile_img{width:50px; height:50px;}
+.user_info h2{font-family: 'SF UI Display Heavy'; color:#000; font-size:20px; text-transform: uppercase;}
+.aside_categories{}
+.aside_categories > li{position: relative; padding: 24px 22px; box-sizing:border-box; border-top:1px solid #F5F5F5; text-transform: uppercase;}
+
+.aside_categories > li span.plus:before{position:absolute; content:''; width:16px; height:2px; top:30px; right:22px; background:#C2C4CA;}
+.aside_categories > li span.plus:after{position:absolute; content:''; width:2px; height:16px; top:23px; right:29px; background:#C2C4CA;}
+.aside_categories > li ul{display: none; margin-top:15px;}
+.aside_categories > li ul li{padding:10px; box-sizing:border-box;}
+.aside_quick_links{border-top:1px solid #F5F5F5; padding: 19.5px 0;}
+.aside_quick_links li{}
+.aside_quick_links li a{display:block;padding:19.5px 22px;  box-sizing:border-box;  text-transform: uppercase;}
