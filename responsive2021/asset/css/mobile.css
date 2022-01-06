@@ -1,4 +1,4 @@
-
+body{background:url('../images/bg_visual.png') no-repeat 45% 30% /auto 130%; font-size: 1rem;}
 /*** HEAD ***/
 header{width:100%; left:0%; padding:0; transform: translateX(0); background: #fff; height: 3.5rem;}
 header h1{width: 1.75rem; top:50%; transform: translate(-50%,-50%); height: 1.75rem; border-radius:0; background:url('../images/Logo_m.png') no-repeat center center / 100% auto;}
@@ -28,8 +28,22 @@ header nav > ul >li ~ li{padding:1.6rem 0 0 0;}
 header nav > ul > li > a:after{display: none;}
 header nav > ul > li > a:hover{color:#4621AD; font-weight: bold;}
 
-/** MAIN **/
-.visual{width:100%; height: auto; display:block; text-align: center;}
-.visual h2{margin-top:8.85rem;}
-.visual .visual_desc{padding:3rem 0 4.2rem;}
-.visual .list{display: block; width: 58.2rem; margin:0 auto;}
+/** main **/
+.visual{width:100%; height:auto; display: block; padding:8.85rem 2.75rem 0; box-sizing: border-box;}
+.visual h2{margin-bottom: 3rem; width:7.4rem;}
+.visual .visual_desc{font-size: 0.7rem; padding:0.5rem 0 4.65rem; text-align: left;}
+.visual .visual_desc br{display: none;}
+.visual .visual_desc br.web{display: block;}
+.visual .list{display: block; width: 100%;}
+.visual .list li{background: no-repeat center top / auto 3.6425rem; background-size:3.6425rem auto; padding-bottom: 1.1685rem;}
+.visual .list li strong{padding-bottom: 0.548rem;}
+
+/** mobile_content **/
+.visual .sign_box{background: #fff; border-radius:0.8rem; padding:2.4rem 1.9665rem; box-sizing:border-box; margin-top: 4.2045rem;}
+.visual .sign_box .btn_wrapper{display: flex;justify-content: space-between;}
+.visual .sign_box .btn_wrapper button{width: 45%; margin:0; height:auto;  border-radius:0.75rem; font-size: 0.6rem; padding:2% 5%; font-weight: 400;}
+.visual .sign_box .btn_wrapper button:first-child{background: #fff; border:1px solid #4621AD; color:#4621AD;}
+.visual .sign_box .btn_wrapper button:last-child{background:#4621AD; color:#fff; box-shadow:none;}
+.visual .sign_box .mobile_content{display: block;}
+.visual .sign_box .mobile_content .chk_block{width:100%; display: flex;}
+.visual .sign_box .mobile_content .chk_block input{width: 48%; display: inline-block; border:none;}

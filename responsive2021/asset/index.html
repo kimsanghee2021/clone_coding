@@ -7,7 +7,7 @@
     <title>rem으로 반응형 홈페이지 만들기</title>
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/index.css ">
-    <link rel="stylesheet" media="(min-width:0px) and (max-width:1025px)" href="css/mobile.css">
+    <link rel="stylesheet" media="(min-width:0px) and (max-width:1199px)" href="css/mobile.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/default.js"></script>
 </head>
@@ -33,7 +33,7 @@
         <section class="visual">
             <div>
                 <h2>Join us today</h2>
-                <p class="visual_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore magna aliqua.</p>
+                <p class="visual_desc">Lorem ipsum dolor sit amet, <br class="web">consectetur adipiscing elit, sed do <br class="web">eiusmod tempor <br>incididunt ut labore <br class="web">et dolore magna aliqua.</p>
                 <ul class="list">
                     <li>
                         <strong>Spend time smart</strong>
@@ -52,9 +52,27 @@
                         <p>Lorem ipsum dolor sit amet</p>
                     </li>
                 </ul>
-                <div class="btn_wrapper">
-                    <button>Sign up</button>
-                    <button>Login</button>
+                <div class="sign_box">
+                    <div class="btn_wrapper">
+                        <button>Sign up</button>
+                        <button>Login</button>
+                    </div>
+                    <div class="mobile_content">
+                        <div class="chk_block">
+                            <input type="radio" id="radio01" name="" ><label for="radio01"><span class="hide">남자</span></label>
+                            <input type="radio" id="radio02" name=""><label for="radio02"><span class="hide">여자</span></label>
+                        </div>
+                        <ul>
+                            <li><input type="text" id="user_name" name="" placeholder="UserName"><label for="user_name"><span class="hide">사용자 이름</span></label></li>
+                            <li><input type="mail" id="user_mail" name="" placeholder="Mail"><label for="user_mail"><span class="hide"></span></label></li>
+                            <li>
+                                <select name="" id="">
+                                    <option value="">What Are Your Interests?</option>
+                                </select>
+                            </li>
+                        </ul>
+                        <button><span class="hide">회원가입</span></button>
+                    </div>
                 </div>
             </div>
         </section>
