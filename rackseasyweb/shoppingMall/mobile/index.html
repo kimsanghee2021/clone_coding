@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mocha</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/home.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </head>
-<body>
+<body class="open">
     <header class="d_flex jcsb aic">
         <button class="sprite aside_toggle">Aside Toggle Button</button>
         <ul class="header_top_links d_flex">
@@ -28,7 +32,7 @@
         </section>
         <section>
             <h2 class="hidden">Latest Products</h2>
-            <ul class="latest_prod_list d_flex jcsb">
+            <ul class="product_list d_flex jcsb">
                 <li>
                     <figure>
                         <img src="images/product_01.jpg" alt="KIMONO">
@@ -177,7 +181,7 @@
         </section>       
     </main>
     <aside>
-        <div class="user_info">
+        <div class="user_info d_flex jcc aic">
             <img src="images/profile.png" alt="Dennis James" class="profile_img">
             <h2>Dennis James</h2>
         </div>
@@ -213,8 +217,8 @@
 
             <li><a href="">Logout</a></li>
             <li><a href="">my page</a></li>
-
         </ul>
     </aside>
+    <script src="js/main.js"></script>
 </body>
 </html>

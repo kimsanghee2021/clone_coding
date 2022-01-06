@@ -109,3 +109,44 @@ body > header{height:94px; padding:0 22px;}
 .cart{width:18px; height:18px; background-position: -118px -96px; text-indent:-999em;}
 .header_top_links{gap:0 34px;}
 /** ---------- form ---------- **/
+
+
+/**** product_list ****/
+.product_list{width:100%; row-gap:25px; flex-wrap: wrap; }
+.product_list li{width:47%; text-align: center;}
+.product_list li img{width: 100%;}
+.product_list li figcaption h3{font-size: 13px; text-transform: uppercase; margin-top: 19px;}
+.product_list li figcaption p{font-size: 12px; margin-top: 3px;}
+
+/** aside **/
+body{position: relative; left:0; transition: left 0.3s ease-out;}
+body > aside{
+    width:70vw; 
+    position: fixed; 
+    top:0; bottom:0; 
+    left:-70vw;
+    transition: left 0.3s ease-out; 
+    display: flex;
+    flex-direction: column;
+}
+body.open{left:70%; width:100vw; height:100vh; position: fixed; box-shadow: 0px 2px 10px rgba(0,0,0,0.2);}
+body.open > aside{left:0;     overflow-y: auto;}
+aside .user_info{padding: 38px 0; box-sizing: border-box; gap:14px;}
+aside .user_info .profile_img{width:50px;}
+aside .user_info h2{font-size: 20px; text-transform: uppercase; color:#000; font-family: 'SF UI Display Heavy';}
+aside .aside_quick_links{flex:1;}
+aside .aside_categories{
+    border-top: 1px solid #F5F5F5; 
+    border-bottom: 1px solid #F5F5F5;
+}
+
+aside .aside_categories li, .aside_quick_links li{
+    line-height: 54px;
+    padding:0 22px;
+    font-size: 15px; text-transform: uppercase;
+}
+aside .aside_categories > li{position: relative;}
+aside .aside_categories > li + li{border-top:1px solid #f5f5f5;}
+aside .aside_categories li span.plus{background-position: -354px -48px; width:18px; height:18px; position: absolute; right:22px; top:21px;opacity: 0.3; text-indent: -999em;}
+aside .aside_categories > li ul{display: none;}
+.aside_quick_links{padding:22px; box-sizing: border-box;}

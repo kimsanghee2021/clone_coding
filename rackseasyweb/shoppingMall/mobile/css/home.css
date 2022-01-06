@@ -1,1 +1,8 @@
 @import url(./common.css);
+
+/** category **/
+.category{padding: 22.5px 0; }
+.category_list li{padding:0 14px;}
+.category_list li a{color:#C2C4CA;font-family: 'SF UI Display Heavy';font-size: 24px; text-transform: uppercase;}
+.category_list li.slick-active a{color:#000; }
+
