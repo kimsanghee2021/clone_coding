@@ -110,6 +110,25 @@ body > header{height:94px; padding:0 22px;}
 .header_top_links{gap:0 34px;}
 /** ---------- form ---------- **/
 
+/**** header ****/
+.header_top_links{gap:34px;}
+.header_top_links .cart{position: relative;}
+.header_top_links .cart:after{
+    content:attr(data-cart);
+    width: 19px;   
+    height: 19px;
+    background: #262628;
+    color:#fff;
+    font-size: 14px;
+    font-family: 'SF UI Display Semibold';
+    position: absolute;
+    right:-10px;
+    top:-10px;
+    border-radius:50%;
+    text-indent: 0;
+    text-align: center;
+    line-height: 19px;
+}
 
 /**** product_list ****/
 .product_list{width:100%; row-gap:25px; flex-wrap: wrap; }
