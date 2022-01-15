@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <style>
+        body{
+            width:100vw;
+            height:100vh;
+            background: url('https://images.unsplash.com/photo-1504966981333-1ac8809be1ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') no-repeat center center / cover;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:#333;
+        }
+        .hidden{text-indent:-999em; position: fixed; width:0; height:0;}
+        .container{width:1280px; margin:0 auto; text-align: center; background: rgba(255,255,255,0.5); padding:10vw 0;}
+        ul,li{list-style:none;}
+        .container ul li{width:100%; background: #000;}
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h1>오늘 나의 할 일</h1>
+        <form action="">
+            <label for="" class="hidden">나의 할일</label>
+            <input type="text" placeholder="내용을 입력해 주세요">
+            <button class="btn">전송</button>
+        </form>
+        <ul>
+            <li class="active">설거지하기<span>X</span></li>
+            <li>빨래하기 <span>X</span></li>
+            <li>커피 내리기<span>X</span></li>
+        </ul>
+    </section>
+
+    <script>
+
+    </script>
+</body>
+</html>
