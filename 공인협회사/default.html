@@ -12,11 +12,11 @@
 <body>
     <div id="wrapper">
         <header class="flex_sb">
-            <div class="login"><a href="#">로그인</a></div>
+            <div class="login"><a href="mypage/login.html">로그인</a></div>
             <h1 class="logo">
-                <a href="#" class="flex_center">
+                <a href="./default.html" class="flex_center">
                     <img src="asset/images/logo.png" alt="logo">
-                    <span clas="font-s-smed">사이버교육원</span>
+                    <span>사이버교육원</span>
                 </a> 
             </h1>
             <button class="toggle_menu">메뉴</button>
@@ -73,26 +73,24 @@
         <!-- aside -->
 		<aside class="aside_menu_wrap">
 			<section class="aside_menu_list">
-                <div class="aside_menu_close splite">닫기버튼</div>
-				<div class="aside_menu_user">
+                <div class="close splite">닫기버튼</div>
+				<section class="aside_menu_user">
                     <!--로그인 안했을 시-->
-                    <div class="user-logout">
+                    <div class="user-logout hidden">
                         <h2 class="font-s-big"><strong class="font-w-bold">로그인</strong>이 필요합니다!</h2>
-                        <button class="btn-blue font-med">로그인 / 회원가입</button>
+                        <button class="btn-blue font-s-med">로그인 / 회원가입</button>
                     </div>
-                    <!--//로그인 안했을 시-->
                     <!--로그인 했을 시-->
-                    <div class="user-login hidden">
+                    <div class="user-login">
                         <h2 class="font-s-big"><em class="font-w-bold color-blue">홍길동</em>님 반갑습니다.</h2>
-                        <ul>
-                            <li><a href="#">나의 강의실</a></li>
+                        <ul class="user-login__box flex_sb">
+                            <li  class="color-blue font-w-bold"><a href="#">나의 강의실</a></li>
                             <li><a href="#">개인정보수정</a></li>
                             <li><a href="#">나의검정확인</a></li>
                             <li><a href="#">결재내역</a></li>
                         </ul>
                     </div>
-                    <!--//로그인 했을 시-->
-                </div>
+                </section>
 				<nav>
 					<h3 class="hidden">토글 메뉴 리스트</h3>
 					<ul>
@@ -102,13 +100,12 @@
 						<li><a href="#">전문교육</a></li>
 						<li><a href="#">민간자격</a></li>
 					</ul>
-                    <div>
+                    <div class="aside_menu_list--page">
                         <a href="">전국 교육안내 센터</a>
                     </div>
 				</nav>
-
                 <!--로그인을 했을시 -->
-                <div class="user-login__btn hidden">
+                <div class="user-login__btn">
                     <a href="">로그아웃</a>
                 </div>
 			</section>

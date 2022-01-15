@@ -2,7 +2,7 @@ $(function(){
     var menuBtn = $('.toggle_menu'),
     menu_list = $('.aside_menu_wrap .aside_menu_list'),
     menu_bg = $('.aside_menu_bg'),
-    menu_close = $('.aside_menu_close');
+    menu_close = $('.aside_menu_list .close');
 
     //토글메뉴 노출 - open
     menuBtn.click(function(){
@@ -17,4 +17,8 @@ $(function(){
         menu_bg.fadeOut();
         $('#wrapper').css({position:'relative'});
     });
+
 });
+function goBack(){
+    window.history.back();
+}
