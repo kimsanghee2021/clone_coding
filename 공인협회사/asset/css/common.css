@@ -91,7 +91,7 @@ a:active, a:visited, a:hover,a:link {color:inherit; text-decoration:none;}
 body{font-size: 15px; color:#222; font-family: 'Noto Sans KR', sans-serif;}
 
 /** -------------------- layout -------------------- **/
-#wrapper{font-size:15px; width:100%; box-sizing:border-box; position: relative;}
+#wrapper{font-size:16px; width:100%; box-sizing:border-box; position: relative;}
 .container{width:100%; padding:0 16px; position: relative;}
 .hidden{text-indent:-999em; overflow:hidden; position: fixed; left:0; width:0; height:0; }
 .d_flex{display: flex;}
@@ -102,12 +102,18 @@ body{font-size: 15px; color:#222; font-family: 'Noto Sans KR', sans-serif;}
 .txt-left {text-align:left;}
 .txt-right {text-align:right;}
 .txt-center {text-align:center;}
-.font-sm{font-size:14px;}
-.font-rg{font-size:16px;}
-.font-big{font-size:20px;}
+.font-s-sm{font-size:14px;}
+.font-s-med{font-size:16px;}
+.font-s-big{font-size:20px;}
+.font-w-thin{font-weight:100;}
+.font-w-bold{font-weight:600;}
+
+.color-blue{color: #1a58a7;}
 
 /** ---------- button link ---------- **/
 .sprite{background:url('../images/sprite.png') no-repeat / 100%; text-indent:-999em;}
+.btn-blue{background-color: #1a58a7; color:#fff; border-radius:4px; display: inline-block; width:100%; height:48px; }
+
 
 /** ---------- form ---------- **/
 /* Form */
@@ -145,7 +151,7 @@ select:focus,textarea:focus,input:focus { border: 1px solid #727272;}
 #wrapper > header{width:100%; height:56px; padding:0 16px; border-bottom:1px solid #e5e5e5;}
 #wrapper > header .login{width:24px; height:56px; background: url('../images/ico-login.png') no-repeat center left / 100%; text-indent: -999em;}
 #wrapper > header .logo a{height:56px;}
-#wrapper > header .logo img{width:46px;}
+#wrapper > header .logo img{width:46.15px;}
 #wrapper > header .logo span{font-weight: 500; margin-left:7px;}
 #wrapper > header .toggle_menu{width:24px; height:56px; background: url(../images/ico-menu.png) no-repeat center right / 100%; text-indent: -999em;}
 
@@ -157,8 +163,8 @@ footer em{font-weight:100; display: inline-block; padding-top:20px;}
 
 
 /** bottom_bar **/
-.bottom_bar{position: relative; width:100%; height:60px;}
-.bottom_bar:after{content: ''; width:100%; height:60px; background: red;}
+.bottom_bar{position: relative;}
+.bottom_bar:after{content: ''; width:100%; height:60px;}
 .bottom_bar .bottom_bar__list{position: fixed; width:100%; bottom:0; box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.08); background: #fff; height:60px; padding:0 16px;}
 .bottom_bar .bottom_bar__list li{text-align: center;}
 .bottom_bar .bottom_bar__list li a{width: 100%; display: flex; flex-direction: column; align-items: center;}
@@ -171,17 +177,17 @@ footer em{font-weight:100; display: inline-block; padding-top:20px;}
 
 /** aside **/ 
 .aside_menu_wrap{width:100%; margin:0 auto; overflow-y:auto;}
-.aside_menu_wrap .aside_menu_list{
-	padding:16px;
-	width:80vw; height:100vh;overflow-y: auto; 
-	position: fixed; top:0; right:-100vw; bottom:0; 
-	background: #fff; z-index: 1; 
-	transition: all 0.4s; z-index: 2;
-}
-.aside_menu_wrap .aside_menu_bg{
-	width:100%; position: fixed; 
-	top:0; left:0; height: 100vh; bottom:0; background: rgba(0,0,0,0.8); 
-	z-index: 1; display: none;
-}
+.aside_menu_wrap .aside_menu_list{ padding:56px 20px 16px;width:80vw; height:100vh; overflow-y: auto; position: fixed; top:0; right:-100vw; bottom:0; background: #fff; z-index: 1; transition: all 0.4s; z-index: 2;}
+.aside_menu_wrap .aside_menu_list .aside_menu_close{width:24px; height:24px;text-indent:-999em; background:url('../images/icon-close.png') no-repeat center center /100%; position:absolute; top:24px; right:24px; }
+.aside_menu_wrap .aside_menu_list .aside_menu_user h2{margin-bottom:20px;}
+
+/** aside_menu_list **/
+.aside_menu_wrap .aside_menu_list ul{width:100%; border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; margin:36px 0 30px; padding:18.5px 0;}
+.aside_menu_wrap .aside_menu_list ul li a{font-size:16px; font-weight:500; padding:11.5px 0; display: inline-block; width:100%;}
+
+/** aside.bg **/ 
+.aside_menu_wrap .aside_menu_bg{width:100%; position: fixed; top:0; left:0; height: 100vh; bottom:0; background: rgba(0,0,0,0.8); z-index: 1; display: none;}
+
+
 /** aside.show **/ 
 .aside_menu_wrap .aside_menu_list.show{right:0vw;}
