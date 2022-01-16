@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mocha</title>
+    <title>Mocha - categories</title>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/categories.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
@@ -14,21 +14,30 @@
 <body>
     <header class="d_flex jcsb aic">
         <button class="sprite aside_toggle">Aside Toggle Button</button>
+        <h1>Dresses</h1>
         <ul class="header_top_links d_flex">
-            <li><a href="" class="sprite wish">wish list</a></li>
-            <li><a href="" class="sprite cart" data-cart="4">cart</a></li>
+            <li><a href="" class="sprite search">search</a></li>
+            <li><a href="" class="sprite cart" data-cart="2">cart</a></li>
         </ul>
+        <form action="" class="searchform">
+            <input type="search" placeholder="키워드를 입력하세요">
+            <label for=""></label>
+        </form>
     </header>
     <main>
-        <section class="category">
-            <h1 class="hidden">category</h1>            
-            <ul class="category_list">
-                <li><a href="./categories.html">Outerwear</a></li>
-                <li><a href="./categories.html">jackets</a></li>
-                <li><a href="./categories.html">Blazers</a></li>
-                <li><a href="./categories.html">Innerwear</a>)</li>
-                <li><a href="./categories.html">Skirts</a></li>
-            </ul>
+        <section class="sort_view d_flex jcsb">
+            <h1 class="hidden">sort and change view</h1>
+            <select name="" id="sort">
+                <option value="신상품">신상품</option>
+                <option value="상품명">상품명</option>
+                <option value="낮은가격">낮은가격</option>
+                <option value="높은가격">높은가격</option>
+            </select>
+            <select name="" id="change_view">
+                <option value="목록형">목록형</option>
+                <option value="이미지형">이미지형</option>
+                <option value="갤러리">갤러리</option>
+            </select>
         </section>
         <section>
             <h2 class="hidden">Latest Products</h2>

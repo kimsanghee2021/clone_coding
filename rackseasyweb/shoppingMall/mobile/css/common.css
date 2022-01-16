@@ -103,11 +103,14 @@ body{font-family:'SF UI Display Light'; font-size: 15px; color:#4A4A4A;}
 body > header{height:94px; padding:0 22px;}
 
 /** ---------- button link ---------- **/
-.sprite{background: url('../images/sprite@2x.png') no-repeat 0 0/492px 498px; display: inline-block;}
-.aside_toggle{background-position: 0 -48px; text-indent:-999em; width:18px; height: 18px;}
-.wish{width:18px; height:18px; background-position: -354px -432px; text-indent:-999em;}
-.cart{width:18px; height:18px; background-position: -118px -96px; text-indent:-999em;}
-.header_top_links{gap:0 34px;}
+.sprite{background: url('../images/sprite@2x.png') no-repeat 0 0/492px 498px; display: inline-block; text-indent:-999em; }
+.aside_toggle{background-position: 0 -48px; width:18px; height: 18px; position: relative;}
+.wish{width:18px; height:18px; background-position: -354px -432px;}
+.cart{width:18px; height:18px; background-position: -118px -96px; }
+.header_top_links{gap:0 34px;background: #fff; position: relative;}
+.search{width:18px; height:18px;}
+.history_back{width:18px; height:18px; background-position: -236px -48px; position: relative;}
+
 /** ---------- form ---------- **/
 
 /**** header ****/

@@ -20,3 +20,31 @@
     asideBtn.click(function(){
         $('body').toggleClass('open');
     });
+    
+    let searchBtn = $('.header_top_links .search');
+    let searchForm = $('.searchform');
+
+    searchBtn.click(function(e){
+        e.preventDefault();
+        searchForm.toggleClass('active');
+
+        if(searchForm.hasClass('active')){
+            searchForm.find('input').focus();
+        } else{
+            searchForm.find('input').blur();
+        }
+    });
+    //history 뒤로가기 버튼
+    var currentUrl = location.href;
+    var localhost = 'http://127.0.0.1:5500/';
+    const history_back = $('.detail .history_back');
+    console.log(currentUrl);
+    var active = currentUrl.search(localhost);
+
+    history_back.click(function(){
+        if(window.history.length > 1 ){
+            history.back();
+        } else{
+            location.href='./categories.html';
+        }
+    });

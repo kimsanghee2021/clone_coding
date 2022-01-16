@@ -1,0 +1,13 @@
+@import url(common.css);
+
+body > header{position: relative; background: #fff; z-index: 1;}
+body > header:before{content:''; position: absolute; top:0; right:0; left:0; bottom:0; background: #fff;}
+body > header h1{position:absolute; top:50%; left:50%; transform: translate(-50%,-50%); font-family: 'SF UI Display Semibold'; font-size: 20px;}
+.searchform{position: absolute; top:0%; left:0; right:0; background: rgba(0,0,0,0.7); z-index: -1; transition: all 0.3s;}
+
+.searchform input{line-height: 50px; color: #fff; width:100%; padding:0 40px;}
+.searchform input::placeholder{color:rgba(255,255,255,0.6);}
+.searchform input:focus{outline: none;}
+.searchform.active{top:100%;}
+.sort_view {height: 40px;}
+.sort_view select{flex:1; border:none; text-align: center;}
