@@ -12,7 +12,7 @@
 <body>
     <div id="wrapper">
         <header class="flex_sb">
-            <div class="login"><a href="mypage/login.html">로그인</a></div>
+            <div class="login"><a href="./member/login.html">로그인</a></div>
             <h1 class="logo">
                 <a href="./default.html" class="flex_center">
                     <img src="asset/images/logo.png" alt="logo">
@@ -76,12 +76,12 @@
                 <div class="close splite">닫기버튼</div>
 				<section class="aside_menu_user">
                     <!--로그인 안했을 시-->
-                    <div class="user-logout hidden">
+                    <div class="user-logout ">
                         <h2 class="font-s-big"><strong class="font-w-bold">로그인</strong>이 필요합니다!</h2>
                         <button class="btn-blue font-s-med">로그인 / 회원가입</button>
                     </div>
                     <!--로그인 했을 시-->
-                    <div class="user-login">
+                    <div class="user-login hidden">
                         <h2 class="font-s-big"><em class="font-w-bold color-blue">홍길동</em>님 반갑습니다.</h2>
                         <ul class="user-login__box flex_sb">
                             <li  class="color-blue font-w-bold"><a href="#">나의 강의실</a></li>
@@ -105,7 +105,7 @@
                     </div>
 				</nav>
                 <!--로그인을 했을시 -->
-                <div class="user-login__btn">
+                <div class="user-login__btn hidden">
                     <a href="">로그아웃</a>
                 </div>
 			</section>

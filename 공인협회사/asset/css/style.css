@@ -16,12 +16,16 @@
 
 /** login.html **/
 #login_wrapper{width:100vw; height:100vh; position: relative;}
-.login_guide_txt{padding-top:56px;}
-.login_guide_txt p{color:#666; font-size:14px; line-height: 1.5; padding:12px 0 20px; display: block; }
-.input_form + .input_form{margin-top:12px;}
-.login_opt{gap:18px; padding:18px 0 37px;}
-.find_btns_menu{width:100%; justify-content: center; margin-top:24px; color:#757575; gap:32px;}
+.login_guide_txt{padding-top:56px; }
+.login_guide_txt h1{color:#000; font-size:23px;}
+.login_guide_txt p{color:#666; font-size:14px; line-height: 1.5; padding:12px 0 20px; display: block;word-break: keep-all; }
+
+.sec_login .input_form + .input_form{margin-top:12px;}
+.sec_login .login_opt{gap:18px; padding:18px 0 37px;}
+
+.find_btns_menu{width:100%; justify-content: center; margin-top:24px; color:#757575; font-size:14px; gap:32px;}
 .find_btns_menu li{position: relative;}
-.find_btns_menu li:last-child::before{position: absolute; content: ''; width:1px; background: #e5e5e5; top:0; left:-16px; height:15px;}
+.find_btns_menu li:last-child::before{position: absolute; content: ''; width:1px; background: #e5e5e5; top:4px; left:-16px; height:15px;}
+
 .join_go_btn{position: absolute; bottom:50px; left:50%; transform: translateX(-50%); color:#454545;}
 .join_go_btn em{text-decoration: underline; font-weight: 600;}
