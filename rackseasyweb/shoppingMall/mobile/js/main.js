@@ -57,3 +57,14 @@
             location.href='./categories.html';
         }
     });
+
+    if($('.people_like_this').length > 0){
+        let likeList = $('.people_like_this ul li');
+        let likeListItem = likeList.find('li');
+        let likListCount = likeList.length;
+        /* 리스트의 개수가 4개이상이면 5번째부터 리스트는 안보이게 하고 after에 공간을 만들어서 넣어라 */
+        /* .people_like_this ul li:nth-child(n+5){display: none;} */
+        if(likListCount > 4){
+            likeListItem.filter(':nth-child(n+5)').css({display:'none'});
+        }
+    }

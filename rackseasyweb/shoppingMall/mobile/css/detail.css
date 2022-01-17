@@ -1,6 +1,7 @@
 @import url(common.css);
 
 .detail  header h1{margin-left:14px; font-size:20px;font-family: 'SF UI Display Semibold'; }
+.detail > main h3{font-family: 'SF UI Display Bold';margin-bottom:15px; font-size:13px; text-transform:uppercase; color:#4a4a4a;}
 .detail > main > div{padding:0px 16px;}
 .detail > main > div + div{margin-top:40px;}
 .detail > main .product_big_img{position: relative;}
@@ -12,6 +13,13 @@
 .detail > main .product_desc h2{margin-bottom: 8px; font-size: 13px; color:#4a4a4a;font-family: 'SF UI Text Medium';}
 .detail > main .product_desc h3{font-size: 12px;}
 .detail > main .product_desc button{padding:0px 24px; height:38px; line-height: 38px; color:#fff;font-size: 13px;font-family: 'SF UI Text Medium'; background: #262628; }
-.thmb_imgs li{}
 .thmb_imgs li img{width:100%;}
 .thmb_imgs li a{display: block; margin:0 10px; }
+.description p+p{margin-top:18px;}
+
+.people_like_this ul{display: flex; gap:22px; position: relative;}
+.people_like_this ul li{width:50px;}
+.people_like_this ul li img{width:100%;}
+
+.people_like_this ul:after{position:absolute; display: none; right:0; content:attr(data-list); width:50px; height:50px; background: #F05522; color:#fff; border-radius: 50%; line-height: 50px; text-align: center;}
+.people_like_this ul.active:after{display: block;}
