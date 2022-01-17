@@ -8,7 +8,16 @@
         slidesToShow : 1
         });
     }
-
+    //상세페이지
+    if($('.thmb_imgs').length > 0){
+        $('.thmb_imgs').slick({
+            slidesToShow: 1.4,
+            slidesToScroll: 2,
+            arrows: false,
+            centerMode: true,
+            centerPadding: '60px',
+        });
+    }
     if($('.aside_categories > li').length > 0){
         let catList = $('.aside_categories > li');
         catList.click(function(){
