@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국공인중개사협회-register</title>
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../asset/js/main.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+        <header id="sub-header" class="flex_center">
+			<h1 class="font-s-big font-w-bold">회원가입</h1>
+			<div class="close splite" onclick="goBack();">닫기버튼</div>
+		</header>
+        <section class="container"> 
+            <div class="sub_desc">
+                <h1 class="font-s-big font-w-bold">개인정보입력</h1>
+                <p>한국공인중개사협회 홈페이지와 사이버교육원  홈페이지는 별도로 운영되며, 아이디는 호환되지  않습니다.</p>
+            </div>
+            <section>
+                <form action="">
+                    <div class="input_form">
+                        <label for="">아이디</label>
+                        <input type="text" placeholder="영문만 입력">
+                        <input type="button" value="중복확인">
+                        <em>아이디 입력해주세요.</em>
+                    </div>
+                    <div class="input_form active">
+                        <label for="">비밀번호</label>
+                        <input type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상 입력">
+                        <em>비밀번호 입력해주세요.</em>
+                    </div>
+                    <div  class="input_form">
+                        <label for="">비밀번호 확인</label>
+                        <input type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상 입력">
+                        <em>비밀번호 입력해주세요.</em>
+                    </div>
+                    <div  class="input_form">
+                        <label for="">이름</label>
+                        <input type="text" placeholder="한글 2자 이상 입력">
+                        <em>이름 입력해주세요.</em>
+                    </div>
+                    <div  class="input_form">
+                        <label for="">생년월일</label>
+                        <input type="text" placeholder="예)20080507">
+                        <em>생년월일 입력해주세요.</em>
+                    </div>
+                    <div class="input_form">
+                        <p class="input_tit">성별</p>
+                        <ul class="flex_center radioBox">
+                            <li>
+                                <input type="radio" id="test1" name="user_sex">
+                                <label for="test1">남자</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="test2" name="user_sex">
+                                <label for="test2">여자</label>
+                            </li>
+                        </ul>
+                        <em class="active">성별 선택해주세요.</em>
+                    </div>
+                    <div  class="input_form">
+                        <label for="">전화번호</label>
+                        <input type="text" placeholder="예)20080507">
+                        <em class="active">전화번호 입력해주세요.</em>
+                    </div>
+                    <div  class="input_form">
+                        <label for="">휴대폰</label>
+                        <input type="text" placeholder="예)01012345678">
+                        <em class="active">휴대폰번호 입력해주세요.</em>
+                    </div>
+                    <div  class="input_form">
+                        <label for="">이메일</label>
+                        <input type="email" placeholder="abc@naver.com" class="">
+                        <em class="active">이메일 잘못 입력하셨습니다.</em>
+                    </div>
+                    <div  class="input_form">
+                        <p class="input_tit">자격증 여부</p>
+                        <ul class="radioBox">
+                            <li>
+                                <input type="radio" id="test3" name="user_certificate">
+                                <label for="test3">예(실무교육, 연수교육)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="test4" name="user_certificate">
+                                <label for="test4">아니오(직무교육)</label>
+                            </li>
+                        </ul>
+                        <em class="active">자격증을 선택해주세요.</em>
+                    </div>
+                    <a class="btn-blue mt36 mb36" href="./register_ok.html">가입완료</a>
+                </form>
+            </section>
+        </section>
+    </div>
+</body>
+</html>
