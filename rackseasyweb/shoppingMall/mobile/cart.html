@@ -4,23 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mocha - cart</title>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="css/detail.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+    <title>Cart - Mocha</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/cart.css">
 </head>
-<body class="detail">
+<body class="cart">
     <header class="d_flex jcsb aic">
         <div class="d_flex">
-            <button class="sprite history_back">history_back button</button>
-            <h1>Outerwear</h1>
-        </div>
-        <p class="header_top_links">
-            <a href="" class="sprite cart" data-cart="2">cart</a>
-        </p>
-    </header>
+            <button class="sprite close">back to home</button>
+            <h1>My Cart</h1>
+        </div>               
+    </header>  
+   
+    <main>    
+       <p class="status">
+           <em>4 itmes</em> in your cart.
+       </p>
+       <form action="">
+           <fieldset>
+               <legend class="hidden">cart list</legend>
+               <div class="field">
+                   <img src="images/cart_item_01.jpg" alt="">
+                   <div class="cart_info">
+                       <h3>LONG DRESS WITH SLITS</h3>
+                       <h4>$ 89.00</h4>
+                       <div class="option">
+                           <label for="size">size</label>
+                           <input type="text" id="size" readonly value="L">
+                       </div>
+                       <div class="option">
+                           <label for="qty">quantity</label>
+                           <input type="number" id="qty">
+                       </div>
+                   </div>
+                   <span class="delete sprite">cart item delete</span>
+               </div>
+               <div class="field">
+                   <img src="images/cart_item_01.jpg" alt="">
+                   <div class="cart_info">
+                       <h3>LONG DRESS WITH SLITS</h3>
+                       <h4>$ 89.00</h4>
+                       <div class="option">
+                           <label for="size">size</label>
+                           <input type="text" id="size" readonly value="L">
+                       </div>
+                       <div class="option">
+                           <label for="qty">quantity</label>
+                           <input type="number" id="qty">
+                       </div>
+                   </div>
+                   <span class="delete sprite">cart item delete</span>
+               </div>
+               <div class="field">
+                   <img src="images/cart_item_01.jpg" alt="">
+                   <div class="cart_info">
+                       <h3>LONG DRESS WITH SLITS</h3>
+                       <h4>$ 89.00</h4>
+                       <div class="option">
+                           <label for="size">size</label>
+                           <input type="text" id="size" readonly value="L">
+                       </div>
+                       <div class="option">
+                           <label for="qty">quantity</label>
+                           <input type="number" id="qty">
+                       </div>
+                   </div>
+                   <span class="delete sprite">cart item delete</span>
+               </div>
+               <div class="field">
+                   <img src="images/cart_item_01.jpg" alt="">
+                   <div class="cart_info">
+                       <h3>LONG DRESS WITH SLITS</h3>
+                       <h4>$ 89.00</h4>
+                       <div class="option">
+                           <label for="size">size</label>
+                           <input type="text" id="size" readonly value="L">
+                       </div>
+                       <div class="option">
+                           <label for="qty">quantity</label>
+                           <input type="number" id="qty">
+                       </div>
+                   </div>
+                   <span class="delete sprite">cart item delete</span>
+               </div>    
+           </fieldset>
+           <div class="total">
+               <div class="d_flex jcsb">
+                   <h4>Shipping cost</h4>
+                   <h5>$ 59.00</h5>
+               </div>
+               <div class="d_flex jcsb">
+                   <h4>TOTAL Price</h4>
+                   <h5>$ 899.00</h5>
+               </div>
+           </div>
+           <button>check out</button>
+       </form>
+    </main>    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>    
     
     <script src="js/main.js"></script>
 </body>

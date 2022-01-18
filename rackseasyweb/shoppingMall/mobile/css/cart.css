@@ -1,0 +1,14 @@
+@import url(common.css);
+.status{line-height:30px; font-family: 'SF UI Display Semibold'; text-transform: uppercase;}
+.status em{color:#f05522;}
+.cart form fieldset{padding:0 20px;}
+.cart form .field{padding:24px 0; position: relative;}
+.cart form .field + .field{border-top:1px solid #f5f5f5; display: flex; gap:20px;}
+.cart form .field img{width:27%;}
+.cart form .field .delete{position: absolute; right:0; top:24px; opacity: 0.2;}
+.cart form .option input{line-height:30px; border:1px solid #d0d0d0; border-radius:4px; background: #fff; text-align:center; width:60px;}
+.cart_info h3{font-family: 'SF UI Text Medium'; font-size:15px; text-transform: uppercase;}
+.cart_info h4{font-family: 'SF UI Display Bold';font-size:15px; margin-bottom:4px;}
+.cart_info .option {display: flex; justify-content: space-between;}
+.cart_info .option + .option{margin-top:8px;}
+.cart_info .option label{font-size:15px; text-transform: uppercase; color:#c2c4ca;}

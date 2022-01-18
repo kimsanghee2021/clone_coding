@@ -1,47 +1,63 @@
-@import url(./normalize.css);
+@import url('normalize.css');
 @font-face {
     font-family: 'SF UI Display Light';
     font-style: normal;
     font-weight: normal;
     src: local('SF UI Display Light'), url('../fonts/sf-ui-display-light-58646b33e0551.woff') format('woff');
 }
+
+
 @font-face {
     font-family: 'SF UI Display Medium';
     font-style: normal;
     font-weight: normal;
     src: local('SF UI Display Medium'), url('../fonts/sf-ui-display-medium-58646be638f96.woff') format('woff');
 }
+
+
 @font-face {
     font-family: 'SF UI Display Semibold';
     font-style: normal;
     font-weight: normal;
     src: local('SF UI Display Semibold'), url('../fonts/sf-ui-display-semibold-58646eddcae92.woff') format('woff');
 }
+
+
 @font-face {
     font-family: 'SF UI Display Bold';
     font-style: normal;
     font-weight: normal;
     src: local('SF UI Display Bold'), url('../fonts/sf-ui-display-bold-58646a511e3d9.woff') format('woff');
 }
+
+
 @font-face {
     font-family: 'SF UI Display Heavy';
     font-style: normal;
     font-weight: normal;
     src: local('SF UI Display Heavy'), url('../fonts/sf-ui-display-heavy-586470160b9e5.woff') format('woff');
 }
+
 @font-face {
     font-family: 'SF UI Text Regular';
     font-style: normal;
     font-weight: normal;
     src: local('SF UI Text Regular'), url('../fonts/SFUIText-Regular.woff') format('woff');
 }
+
+
 @font-face {
     font-family: 'SF UI Text Medium';
     font-style: normal;
     font-weight: normal;
     src: local('SF UI Text Medium'), url('../fonts/SFUIText-Medium.woff') format('woff');
 }
-/** css reset **/
+
+    
+
+
+
+/* CSS RESET */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -62,8 +78,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-button, input{background: none; border:none;}
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -87,34 +101,94 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-img, video{vertical-align: top;}
-a{text-decoration: none; color:#222;}
+img, video{
+    vertical-align: top;
+}
+a {
+    color:#000;
+    text-decoration: none;
+}
+/* ----------------- typography --------------- */
+body{
+    font-family: 'SF UI Display Light';
+    font-size: 15px;
+    color:#4A4A4A;
+}
+/* ----------------- layout --------------- */
+.d_flex{
+    display: flex;
+}
+.aic{
+    align-items: center;
+}
+.jcc {
+    justify-content: center;
+}
+.jcsb{
+    justify-content: space-between;
+}
+body>header{
+    height: 94px;
+    padding: 0 22px;
+}
+.hidden{
+    display: none;
+}
+body > header {
+    position: relative;
+    background: #fff;
+    z-index: 2;
+}
 
-/** ---------- typography ---------- **/
-body{font-family:'SF UI Display Light'; font-size: 15px; color:#4A4A4A;}
+body > header h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    font-size: 20px;
+    font-family: 'SF UI Display Semibold';
+}
+/* ----------------- button link --------------- */
+button, input{
+    background: none;
+    border:none;
+}
+.sprite{
+    background: url('../images/sprite@2x.png') no-repeat 0 0/492px 498px;
+    display: inline-block;
+    text-indent:-9999em;    
+    width: 18px;
+    height: 18px;
+}
+.aside_toggle {
+    background-position:0 -48px;
+}
+.wish{
+    background-position:-354px -432px;
+}
+.cart{
+    background-position:-118px -96px;
+}
 
-/** ---------- layout ---------- **/
-.d_flex{display: flex;}
-.jcsb{justify-content: space-between;}
-.aic{align-items: center;}
-.jcc{justify-content: center;}
-.fww{flex-wrap: wrap;}
-.hidden{text-indent:-999em; overflow:hidden; position: fixed; left:0; width:0; height:0; }
-body > header{height:94px; padding:0 22px;}
-
-/** ---------- button link ---------- **/
-.sprite{width:18px; height:18px; background: url('../images/sprite@2x.png') no-repeat 0 0/492px 498px; display: inline-block; text-indent:-999em; }
-.aside_toggle{background-position: 0 -48px; position: relative;}
-.wish{background-position: -354px -432px;}
-.cart{background-position: -118px -96px; }
-.header_top_links{gap:0 34px;background: #fff; position: relative;}
-.history_back{background-position: -236px -48px; position: relative;}
-.share{background-position:-354px -144px; }
-/** ---------- form ---------- **/
-
-/**** header ****/
-.header_top_links{gap:34px;}
-.header_top_links .cart{position: relative;}
+.history_back {
+    background-position: -236px -48px;
+}
+.share{
+    background-position: -354px -144px;
+}
+.close{
+    background-position: -118px -288px;
+}
+.delete{
+    background-position: -472px 100%;
+}
+/* ----------------- HEADER --------------- */
+.header_top_links{
+    gap:34px;
+}
+.header_top_links .cart {
+    position: relative;
+}
 .header_top_links .cart:after{
     content:attr(data-cart);
     width: 19px;   
@@ -131,43 +205,90 @@ body > header{height:94px; padding:0 22px;}
     text-align: center;
     line-height: 19px;
 }
-
-/**** product_list ****/
-.product_list{width:100%; row-gap:25px; flex-wrap: wrap; }
-.product_list li{width:47%; text-align: center;}
-.product_list li img{width: 100%;}
-.product_list li figcaption h3{font-size: 13px; text-transform: uppercase; margin-top: 19px;}
-.product_list li figcaption p{font-size: 12px; margin-top: 3px;}
-
-/** aside **/
-body{position: relative; left:0; transition: left 0.3s ease-out;}
-body > aside{
-    width:70vw; 
-    position: fixed; 
-    top:0; bottom:0; 
-    left:-70vw;
-    transition: left 0.3s ease-out; 
+/* ----------------- Product list --------------- */
+.product_list{
+    row-gap: 25px;
+    flex-wrap:wrap;
+}
+.product_list li{
+    width: 47%;
+    text-align: center;
+}
+.product_list li img{
+    width: 100%;
+}
+/* ----------------- ASIDE --------------- */
+body{
+    position:relative;
+    left: 0;
+    transition:left 0.3s ease-out;    
+}
+body > aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 70vw;
+    left: -70vw;
+    transition:left 0.3s ease-out;
     display: flex;
     flex-direction: column;
 }
-body.open{left:70%; width:100vw; height:100vh; position: fixed; box-shadow: 0px 2px 10px rgba(0,0,0,0.2);}
-body.open > aside{left:0;     overflow-y: auto;}
-aside .user_info{padding: 38px 0; box-sizing: border-box; gap:14px;}
-aside .user_info .profile_img{width:50px;}
-aside .user_info h2{font-size: 20px; text-transform: uppercase; color:#000; font-family: 'SF UI Display Heavy';}
-aside .aside_quick_links{flex:1;}
-aside .aside_categories{
-    border-top: 1px solid #F5F5F5; 
+body.open{
+    left: 70%;    
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);     
+}
+body.open  > aside{
+    left: 0;
+    overflow-y: auto;   
+}
+.aside_quick_links{
+    flex:1; 
+}
+.user_info {
+    padding: 38px 0;
+}
+.profile_img {
+    width: 50px;
+}
+.user_info h2{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'SF UI Display Heavy';
+    margin-left: 14px;
+}
+.aside_categories {
+    border-top: 1px solid #F5F5F5;
     border-bottom: 1px solid #F5F5F5;
 }
-
-aside .aside_categories li, .aside_quick_links li{
+.aside_categories li,
+.aside_quick_links li{
     line-height: 54px;
-    padding:0 22px;
-    font-size: 15px; text-transform: uppercase;
+    padding: 0 22px;
+    font-size: 15px;
+    text-transform: uppercase;
 }
-aside .aside_categories > li{position: relative;}
-aside .aside_categories > li + li{border-top:1px solid #f5f5f5;}
-aside .aside_categories li span.plus{background-position: -354px -48px; width:18px; height:18px; position: absolute; right:22px; top:21px;opacity: 0.3; text-indent: -999em;}
-aside .aside_categories > li ul{display: none;}
-.aside_quick_links{padding:22px; box-sizing: border-box;}
+.aside_categories li + li{
+    border-top: 1px solid #F5F5F5;
+}
+.aside_categories > li{
+    position: relative;
+}
+.sprite.plus{
+    width: 18px;
+    height: 18px;
+    background-position: -354px -48px;
+    position: absolute;
+    right: 22px;
+    top:21px;
+    opacity: 0.3;
+}
+.aside_categories > li ul{
+    display: none;
+}
+.aside_quick_links {
+    padding: 22px;
+}
