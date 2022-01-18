@@ -8,7 +8,16 @@
         slidesToShow : 1
         });
     }
-
+    //상세페이지
+    if($('.thmb_imgs').length > 0){
+        $('.thmb_imgs').slick({
+            slidesToShow: 1.4,
+            slidesToScroll: 2,
+            arrows: false,
+            centerMode: true,
+            centerPadding: '60px',
+        });
+    }
     if($('.aside_categories > li').length > 0){
         let catList = $('.aside_categories > li');
         catList.click(function(){
@@ -48,3 +57,14 @@
             location.href='./categories.html';
         }
     });
+
+    if($('.people_like_this').length > 0){
+        let likeList = $('.people_like_this ul li');
+        let likeListItem = likeList.find('li');
+        let likListCount = likeList.length;
+        /* 리스트의 개수가 4개이상이면 5번째부터 리스트는 안보이게 하고 after에 공간을 만들어서 넣어라 */
+        /* .people_like_this ul li:nth-child(n+5){display: none;} */
+        if(likListCount > 4){
+            likeListItem.filter(':nth-child(n+5)').css({display:'none'});
+        }
+    }
