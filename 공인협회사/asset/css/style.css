@@ -14,8 +14,10 @@
 .category .category__list li:last-child{width:100%;height:97.5px; background-image:url('../images/cate_img_05.png');}
 .category .category__list li:last-child a{height:97.5px;}
 
+
 /** login.html **/
-#login_wrapper{width:100vw; height:100vh; position: relative;}
+#login_wrapper{width:100vw; height:100%; position: relative; max-width:720px;}
+#login_wrapper .container{width:100%; height:100vh;}
 .sec_login .login_opt{gap:18px; padding:18px 0 37px;}
 
 .find_btns_menu{width:100%; justify-content: center; margin-top:24px; color:#757575; font-size:14px; gap:32px;}
@@ -37,5 +39,6 @@
 .agree_wrapper .agree_area .agree_desc table th{background: #666; color:#fff; padding:10px 0;}
 .agree_wrapper .agree_area .agree_desc table td{border-bottom:1px solid #ccc; padding:10px 0;}
 
-
+/** tab_wrapper **/
+.tab_wrapper .input_form{margin-top:16px;}
 

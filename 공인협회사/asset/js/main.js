@@ -18,6 +18,14 @@ $(function(){
         $('#wrapper').css({position:'relative'});
     });
 
+    //인풋박스 리스트 탭 
+    $('.input_tabs li a').click(function(e){
+        e.preventDefault();
+        $(this).parents('li').addClass('active').siblings().removeClass('active');
+        var idx = $(this).parents('li').index();
+        $('.tab_cont').hide().eq(idx).show();
+    });
+
 });
 function goBack(){
     window.history.back();
