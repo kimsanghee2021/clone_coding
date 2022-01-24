@@ -24,7 +24,9 @@ html, body {
 
 .panel-body {
   padding: 15px;
+  display: none;
 }
+.panel-question.active .panel-body{display: block;}
 
 #btn-collapse {
   margin-bottom: 10px;

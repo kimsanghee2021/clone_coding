@@ -62,9 +62,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-
-}
 ol, ul {
 	list-style: none;
 }
@@ -91,7 +88,7 @@ body{font-size: 16px; color:#454545; max-width:720px; margin:0 auto; width:100%;
 
 /** -------------------- layout -------------------- **/
 #wrapper{font-size:16px; width:100%; box-sizing:border-box; position: relative; max-width:720px;}
-.container{width:100%; padding:0 16px; position: relative;}
+.container{width:100%; padding:0 16px; position: relative; z-index: 10;}
 .hidden{text-indent:-999em; overflow:hidden; position: fixed; left:0; width:0; height:0; display: none; }
 .d_flex{display: flex;}
 .flex_center{display: flex; align-items : center;}
@@ -101,7 +98,7 @@ body{font-size: 16px; color:#454545; max-width:720px; margin:0 auto; width:100%;
 .txt-left {text-align:left;}
 .txt-right {text-align:right;}
 .txt-center {text-align:center;}
-.font-s-sm{font-size:14px;}
+.font-s-sm{font-size:14px !important;}
 .font-s-med{font-size:16px;}
 .font-s-big{font-size:20px !important;}
 .font-s-big02{font-size:23px !important;}
@@ -110,7 +107,9 @@ body{font-size: 16px; color:#454545; max-width:720px; margin:0 auto; width:100%;
 .font-w-bold{font-weight:600 !important;}
 .color-blue{color: #1a58a7 !important;}
 .color-gray{color:#666 !important;}
+.color-black{color:#000 !important;}
 .color-red{color:#e64444 !important;}
+.bg-gray{background: #f1f1f1 !important;}
 
 /** ---------- button link ---------- **/
 .btn-blue{background-color: #1a58a7; color:#fff !important; font-weight:400; border-radius:4px; display: inline-block; width:100%; height:56px; line-height: 56px; text-align: center;}
@@ -122,10 +121,10 @@ body{font-size: 16px; color:#454545; max-width:720px; margin:0 auto; width:100%;
 /* Form layout */
 textarea { border:1px solid #dbdbdb;}
 
-select, input[type=tel],input[type=time],input[type=text],input[type=date],
+select, input[type=search], input[type=tel],input[type=time],input[type=text],
 input[type=password],input[type=search],input[type=email],input[type=url],input[type=number],
 input[type=date],textarea {
-	width:100%; height:53px; font-size:16px; color:#454545; 
+	width:100% !important; height:53px; font-size:16px; color:#454545; display: block;
 	background:#f5f5f5; text-indent:16px; border-radius: 4px;  vertical-align:middle;position: relative; font-weight: 400;box-sizing: border-box;
 }
 select{  
@@ -135,6 +134,9 @@ select{
   background:#f5f5f5 url('../images/ico-arrow.png') no-repeat 95% 50% / 5%;
   border:none;
  } 
+ select:required:invalid {
+  color: #b5b5b5;
+}
 select option[value=""][disabled] {
 	display: none;
 }
@@ -236,7 +238,7 @@ select:focus{background:#fff url('../images/ico-arrow.png') no-repeat 95% 50% / 
 
 
 /**sub-header**/
-#sub-header_wrapper{position: relative; width:100%; margin:0 auto; background: #fff; z-index: 1;}
+#sub-header_wrapper{position: relative; width:100%; margin:0 auto; background: #fff; z-index: 13;}
 #sub-header_wrapper.fixed:after{display: block; width:100%; height:56px; content:"";}
 #sub-header_wrapper.fixed #sub-header{position: fixed; top:0; left:0;}
 
@@ -253,7 +255,7 @@ select:focus{background:#fff url('../images/ico-arrow.png') no-repeat 95% 50% / 
 
 /** 싱글페이지 완료 / 아이디찾기 **/
 #singlePage {width:100vw; height:100vh; max-width:720px; margin:0 auto; font-size:16px; box-sizing:border-box; position: relative;}
-#singlePage .container{ margin:0 auto; height:85vh; position: relative;}
+#singlePage .container{ margin:0 auto; height:85vh; position: relative; z-index: 10;}
 #singlePage .container .single_text_area{width:100%; display: flex;align-items: center; justify-content: center;flex-direction: column; margin-bottom:120px;}
 #singlePage .container .single_text_area .icon-success{width:62px; height:62px; margin-bottom:30px;}
 #singlePage .container .single_text_area .icon-success img{width:100%;}
@@ -273,7 +275,7 @@ footer em{font-weight:300; display: block; padding-top:20px;}
 
 
 /** bottom_bar **/
-.bottom_bar{position: relative; width:100%; height:60px; background: #fff;}
+.bottom_bar{position: relative; width:100%; height:60px; background: #fff; z-index: 10;}
 .bottom_bar:after{content: ''; width:100%; height:60px;}
 .bottom_bar .bottom_bar__list{position: fixed; width:100%; bottom:0; left:50%; transform: translateX(-50%); max-width: 720px;  box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.07); background: #fff; height:60px;}
 .bottom_bar .bottom_bar__list li{text-align: center; width:25%;}
@@ -286,7 +288,7 @@ footer em{font-weight:300; display: block; padding-top:20px;}
 
 
 /** aside **/ 
-.aside_menu_wrap{width:100%; margin:0 auto; overflow-y:auto;}
+.aside_menu_wrap{width:100%; margin:0 auto; overflow-y:auto; z-index: 15;}
 .aside_menu_wrap .aside_menu_list{ padding:56px 20px 16px;width:80vw; height:auto; overflow-y: auto; position: fixed; top:0; right:-100vw; bottom:0; background: #fff; z-index: 1; transition: all 0.4s; z-index: 2;}
 .aside_menu_wrap .aside_menu_list .aside_menu_user h2{margin-bottom:20px;}
 .aside_menu_wrap .aside_menu_list .aside_menu_user .user-logout{border-bottom:1px solid #e5e5e5; padding-bottom:36px;}
@@ -306,10 +308,10 @@ footer em{font-weight:300; display: block; padding-top:20px;}
 .aside_menu_wrap .aside_menu_list .user-login__btn a{ width:100%; padding:30px 0; font-weight:400; color:#757575;}
 
 /** aside.bg **/ 
-.aside_menu_wrap .aside_menu_bg{width:100%; position: fixed; top:0; left:0; height: 100vh; bottom:0; background: rgba(0,0,0,0.8); z-index: 1; display: none;}
+.aside_menu_wrap .aside_menu_bg{width:100%; position: fixed; top:0; left:0; height: 100vh; bottom:0; background: rgba(0,0,0,0.8); z-index: 13; display: none;}
 
 /** aside.show **/ 
-.aside_menu_wrap .aside_menu_list.show{right:0vw;}
+.aside_menu_wrap .aside_menu_list.show{right:0vw; z-index: 15;}
 
 
 
@@ -322,7 +324,9 @@ footer em{font-weight:300; display: block; padding-top:20px;}
 .mt30{margin-top:30px;}
 .mt50{margin-top:50px;}
 .mt36{margin-top:36px;}
+.mb12{margin-bottom:12px;}
 .mb15{margin-bottom:15px;}
+.mb20{margin-bottom:20px;}
 .mb36{margin-bottom:36px;}
 .mb50{margin-bottom:50px;}
 .mt80{margin-top:80px;}

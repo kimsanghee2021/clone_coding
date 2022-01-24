@@ -1,39 +1,35 @@
-/*
-탭메뉴를 클릭하면 관련 내용이 나타나고
-하이라이트 배경이 활성화된 메뉴위치로 이동합니다.
-*/
-let tabMenu =  document.querySelectorAll('.tab-menu li');
+//각 해당하는 탭 영역으로 가기
+let tabMenu = document.querySelectorAll('.tab-menu > li');
 let tabContent = document.querySelectorAll('#tab-content > div');
 let highlight = document.querySelector('.highlight');
+console.log(highlight);
 
-//첫번째 먼저 해야할일 
+//첫번째 컨텐츠 내용만 보이고 나머지 안보이게하기
 /* show content - 모든 내용을 안보이도록 하고 숫자에 해당하는 내용을 보이도록 해라 */
-function showContent(num){
-    // for(var i= 0; i < tabContent.length; i++){
-    //     tabContent[i].style.display = 'none';
-    // }
+
+function showContent(i){
     for(tc of tabContent){
         tc.style.display = 'none';
     }
-    tabContent[num].style.display = 'block';
+    tabContent[i].style.display = 'block';
 }
 showContent(0);
 
 //탭메뉴를 클릭하면 할 일
-//대상.forEach(function(변수명,인덱스){...});
 tabMenu.forEach(function(ele, idx){
-    ele.addEventListener('click',()=>{
+    //console.log(ele, idx);
+    ele.addEventListener('click', function(){
         showContent(idx);
-        moveHightLight(idx);
+        moveHighligt(idx);
     });
 });
 
-//기준 위치에서 대상.offsetLeft(), 대상의 넓이 offsetWidth
-function moveHightLight(num){
-    let newLeft = tabMenu[num].offsetLeft;
-    let newWidth = tabMenu[num].offsetWidth;
-    console.log(newLeft,newWidth);
-    
-    highlight.style.left = `${newLeft}px`;
-    highlight.style.width = `${newWidth}px`;
-};
+//highlight는 각각의 탭메뉴 넓이와 거리에 맞춰서 이동해라
+function moveHighligt(z){
+    let offsetWdith = tabMenu[z].offsetWidth;
+    let offsetLeft = tabMenu[z].offsetLeft;
+    console.log(offsetWdith,offsetLeft);
+    highlight.style.left = `${offsetLeft}px`;
+    highlight.style.width = `${offsetWdith}px`;
+}
+
