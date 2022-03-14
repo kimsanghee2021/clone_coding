@@ -61,7 +61,7 @@ function keupHandler(){
     }
     const keywords = this.value;
     const filteredArray = myArray.filter(el=>{
-        return el.text.includes(keywords);
+        return el.text.toLowerCase().includes(keywords.toLowerCase());
     });
     console.log(filteredArray);
     if(filteredArray.length > 0){
