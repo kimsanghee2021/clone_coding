@@ -6,36 +6,30 @@ const listView = 'list-view';
 const gridView = 'grid-view';
 const dNone = 'd-none';
 
-//해야할 일 
 //버튼활성화 스크립트 짜기 
-
-
-//버튼을 클릭하면 그 버튼에게만 active가 들어오게 해라.
-
-// btns.forEach(function(btn,idx){
-//     btn.addEventListener('click',function(){
-//         for(const el of btns){
-//             el.parentElement.classList.remove(active);
-//             btns[idx].parentElement.classList.add(active);
-//             console.log(btns[idx]);
-//         }
-//     });
-// });
-
-for(const btn of btns){
+btns.forEach(function(btn){
     btn.addEventListener('click',function(){
         const parent = this.parentElement;
         document.querySelector('.view-options .active').classList.remove(active);
         parent.classList.add(active);
-        // parent에 'show-list'가 있다면 input[type='range']숨김처리 하기
+
         if(parent.classList.contains('show-list')){
             parent.previousElementSibling.previousElementSibling.classList.add(dNone);
             imgList.classList.remove(gridView);
             imgList.classList.add(listView);
-        }else{
+        } else{
             parent.previousElementSibling.classList.remove(dNone);
             imgList.classList.remove(listView);
             imgList.classList.add(gridView);
         }
     });
-}
+});
+
+//input range를 변할때마다 갤러리 넓이가 변하게 짜기
+const rangeInput = document.querySelector('input[type="range"]');
+rangeInput.addEventListener('input',function(){
+    document.documentElement.style.setProperty('--minRangeValue',`${this.value}px`);
+    //선택자.style.css속성명 = 값
+    //선택자.style.backgroundColor = 'blue';
+    //선택자.style.setProperty('backgroudnColor','blue');
+});
